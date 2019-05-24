@@ -25,7 +25,7 @@ train_X = pd.get_dummies(train_X)
 test = pd.get_dummies(test)
 
 #eliminating the irrelivent column wrt the test data
-train_X = train_X.loc[:,list(test.columns)]# eliminating the irrelivent column wrt the test data
+train_X = train_X.loc[:,list(test.columns)]
 
 #imputing to overcome the problem of missing values
 imp = Imputer(missing_values='NaN', strategy='mean', axis=0)
